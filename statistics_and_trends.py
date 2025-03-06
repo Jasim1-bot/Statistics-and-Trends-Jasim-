@@ -17,27 +17,30 @@ import seaborn as sns
 
 def plot_relational_plot(df):
     fig, ax = plt.subplots()
+    sns.relplot(data=df)
     plt.savefig('relational_plot.png')
     return
 
 
 def plot_categorical_plot(df):
     fig, ax = plt.subplots()
+    sns.catplot(data=df)
     plt.savefig('categorical_plot.png')
     return
 
 
 def plot_statistical_plot(df):
     fig, ax = plt.subplots()
+    sns.histplot(data=df)
     plt.savefig('statistical_plot.png')
     return
 
 
 def statistical_analysis(df, col: str):
-    mean =
-    stddev =
-    skew =
-    excess_kurtosis =
+    mean = df[col].mean()
+    stddev = df[col].std() 
+    skew = df[col].skew()
+    excess_kurtosis = df[col].kurt()
     return mean, stddev, skew, excess_kurtosis
 
 
