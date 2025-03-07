@@ -23,7 +23,7 @@ def plot_relational_plot(df):
         print("Insufficient numerical columns for the relational plot.")
         return
     sns.regplot(data=df, x=numeric_cols[0], y=numeric_cols[1])
-    plt.title("Relational Plot")    
+    plt.title("Relational Plot")
     plt.savefig('relational_plot.png')
     plt.close()
     return
@@ -60,7 +60,7 @@ def plot_statistical_plot(df):
     plt.grid(True)
     plt.savefig('statistical_plot.png')
     plt.close()
-    return 
+    return
 
 def statistical_analysis(df, col: str):
     """Perform statistical analysis on the specified column."""
